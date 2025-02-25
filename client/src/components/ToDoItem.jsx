@@ -1,9 +1,13 @@
-export default function ToDoItem() {
+export default function ToDoItem({
+    _id,
+    task,
+    status,
+}) {
     return (
         <>
             <tr>
-                <td>Read a book</td>
-                <td class="status completed">Completed</td>
+                <td>{task}</td>
+                <td class="status completed">{status}</td>
                 <td><button class="toggle-btn">Change Status</button></td>
             </tr>
         </>

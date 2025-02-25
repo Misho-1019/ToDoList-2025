@@ -26,7 +26,7 @@ export default function ToDoList() {
                     </tr>
                 </thead>
                 <tbody>
-                    {todos.map(todo => <ToDoItem />)}
+                    {todos.map(todo => <ToDoItem key={todo._id} task={todo.task} status={todo.status} />)}
                 </tbody>
             </table>
         </>

@@ -17,7 +17,7 @@
     "4d5e6f7g-8901-23ab-cdef-4567890123de": {
         "_id": "4d5e6f7g-8901-23ab-cdef-4567890123de",
         "task": "Call the plumber",
-        "status": "In Progress"
+        "status": "Pending"
     },
     "5e6f7g8h-9012-34ab-cdef-5678901234ef": {
         "_id": "5e6f7g8h-9012-34ab-cdef-5678901234ef",
@@ -37,7 +37,7 @@
     "8h9i0j1k-2345-67ab-cdef-8901234567hi": {
         "_id": "8h9i0j1k-2345-67ab-cdef-8901234567hi",
         "task": "Prepare for presentation",
-        "status": "In Progress"
+        "status": "Completed"
     },
     "9i0j1k2l-3456-78ab-cdef-9012345678ij": {
         "_id": "9i0j1k2l-3456-78ab-cdef-9012345678ij",
