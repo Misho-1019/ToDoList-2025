@@ -16,8 +16,8 @@ export default function ToDoItem({
         <>
             <tr className={todoClassName.join(' ')}>
                 <td>{task}</td>
-                <td class="status completed">{status}</td>
-                <td><button class="toggle-btn">Change Status</button></td>
+                <td className="status completed">{status}</td>
+                <td><button className="toggle-btn">Change Status</button></td>
             </tr>
         </>
     )
