@@ -1,3 +1,5 @@
+import ToDoItem from "./ToDoItem";
+
 export default function ToDoList() {
     return (
         <>
@@ -10,21 +12,7 @@ export default function ToDoList() {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Finish project</td>
-                        <td class="status pending">Pending</td>
-                        <td><button class="toggle-btn">Change Status</button></td>
-                    </tr>
-                    <tr>
-                        <td>Buy groceries</td>
-                        <td class="status pending">Pending</td>
-                        <td><button class="toggle-btn">Change Status</button></td>
-                    </tr>
-                    <tr>
-                        <td>Read a book</td>
-                        <td class="status completed">Completed</td>
-                        <td><button class="toggle-btn">Change Status</button></td>
-                    </tr>
+                    <ToDoItem />
                 </tbody>
             </table>
         </>
