@@ -44,16 +44,6 @@ td {
   border-radius: 5px;
 }
 
-/* Pending Status */
-.pending {
-  color: red;
-}
-
-/* Completed Status */
-.completed {
-  color: green;
-}
-
 /* Buttons */
 .toggle-btn {
   padding: 8px 12px;
