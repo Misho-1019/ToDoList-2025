@@ -39,8 +39,8 @@ export default function ToDoList() {
             if (!response.ok) {
                 throw new Error('Failed to change status!')
             }
-            
-            setTodos(oldTodo => oldTodo.map(todo => todo._id === todoId ? {...todo, status: !todo.status} : todo))
+
+            setTodos(oldTodo => oldTodo.map(todo => todo._id === todoId ? { ...todo, status: !todo.status } : todo))
         } catch (error) {
             console.error(error.message);
         }
@@ -63,7 +63,7 @@ export default function ToDoList() {
             setTodos(todos.filter((todo) => todo._id !== todoId))
         } catch (error) {
             console.error(error.message);
-            
+
         }
     }
 
@@ -78,6 +78,11 @@ export default function ToDoList() {
                     </tr>
                 </thead>
                 <tbody>
+                    <div className="loading-container">
+                        <div className="loading-spinner">
+                            <span className="loading-spinner-text">Loading</span>
+                        </div>
+                    </div>
                     {todos.map(todo =>
                         <ToDoItem
                             key={todo._id}
