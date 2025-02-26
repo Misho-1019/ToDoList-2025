@@ -41,6 +41,10 @@ td {
   border-bottom: 4px solid #4B5563;
 }
 
+tbody > div {
+  display: contents;
+}
+
 /* Loading spinner */
 
 .loading-container {

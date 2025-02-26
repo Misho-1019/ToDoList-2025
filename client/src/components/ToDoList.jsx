@@ -4,6 +4,7 @@ import ToDoItem from "./ToDoItem";
 
 export default function ToDoList() {
     const [todos, setTodos] = useState([]);
+    const [isPending, setIsPending] = useState(true)
 
     useEffect(() => {
         fetch('http://localhost:3030/jsonstore/todos')
@@ -11,6 +12,7 @@ export default function ToDoList() {
             .then(data => {
                 const result = Object.values(data)
                 setTodos(result)
+                setIsPending(false)
             })
             .catch(error => {
                 console.error(error.message);
@@ -69,6 +71,13 @@ export default function ToDoList() {
 
     return (
         <>
+            {isPending && (<div className="loading-container">
+                <div className="loading-spinner">
+                    <span className="loading-spinner-text">Loading</span>
+                </div>
+            </div>)
+            }
+            
             <table>
                 <thead>
                     <tr>
@@ -78,11 +87,6 @@ export default function ToDoList() {
                     </tr>
                 </thead>
                 <tbody>
-                    <div className="loading-container">
-                        <div className="loading-spinner">
-                            <span className="loading-spinner-text">Loading</span>
-                        </div>
-                    </div>
                     {todos.map(todo =>
                         <ToDoItem
                             key={todo._id}
