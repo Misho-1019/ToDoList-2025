@@ -1,9 +1,17 @@
 /* Pending Status */
 .pending {
-    background-color: red;
-  }
-  
-  /* Completed Status */
-  .completed {
-    background-color: green;
-  }
+    background-color: rgb(163, 95, 95);
+}
+
+/* Completed Status */
+.completed {
+    background-color: rgb(95, 163, 101);
+}
+
+.pending:hover {
+    background-color: rgb(181, 108, 108);
+}
+
+.completed:hover {
+    background-color: rgb(107, 183, 114);
+}

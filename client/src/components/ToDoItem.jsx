@@ -19,8 +19,10 @@ export default function ToDoItem({
             <tr className={todoClassName.join(' ')}>
                 <td>{task}</td>
                 <td className="status">{status ? 'Completed' : 'Pending'}</td>
-                <td><button onClick={() => onStatusChange(_id, status)} className="toggle-btn">Change Status</button></td>
-                <td><button onClick={() => onDelete(_id)} className="toggle-btn">Delete</button></td>
+                <td>
+                    <button onClick={() => onStatusChange(_id, status)} className="toggle-btn">Change Status 🔄</button>
+                    <button onClick={() => onDelete(_id)} className="toggle-btn">Delete ❌</button>
+                </td>
             </tr>
         </>
     )

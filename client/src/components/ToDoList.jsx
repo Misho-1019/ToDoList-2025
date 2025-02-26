@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import ToDoItem from "./ToDoItem";
-// Delete, CSS, Loading Spinner
+// CSS, Loading Spinner
 
 export default function ToDoList() {
     const [todos, setTodos] = useState([]);
