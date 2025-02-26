@@ -5,6 +5,7 @@ export default function ToDoItem({
     task,
     status,
     onStatusChange,
+    onDelete,
 }) {
 
     const todoClassName = [styles['pending']]
@@ -19,6 +20,7 @@ export default function ToDoItem({
                 <td>{task}</td>
                 <td className="status">{status ? 'Completed' : 'Pending'}</td>
                 <td><button onClick={() => onStatusChange(_id, status)} className="toggle-btn">Change Status</button></td>
+                <td><button onClick={() => onDelete(_id)} className="toggle-btn">Delete</button></td>
             </tr>
         </>
     )

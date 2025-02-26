@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import ToDoItem from "./ToDoItem";
+// Delete, CSS, Loading Spinner
 
 export default function ToDoList() {
     const [todos, setTodos] = useState([]);
@@ -45,6 +46,27 @@ export default function ToDoList() {
         }
     }
 
+    const deleteTaskHandler = async (todoId) => {
+        const taskDelete = todos.find(todo => todo._id === todoId)
+
+        if (!taskDelete) return;
+
+        try {
+            const response = await fetch(`http://localhost:3030/jsonstore/todos/${todoId}`, {
+                method: 'DELETE',
+            })
+
+            if (!response.ok) {
+                throw new Error('Failed to delete task!')
+            }
+
+            setTodos(todos.filter((todo) => todo._id !== todoId))
+        } catch (error) {
+            console.error(error.message);
+            
+        }
+    }
+
     return (
         <>
             <table>
@@ -63,6 +85,7 @@ export default function ToDoList() {
                             task={todo.task}
                             status={todo.status}
                             onStatusChange={statusChangeHandler}
+                            onDelete={deleteTaskHandler}
                         />
                     )}
                 </tbody>
